@@ -1,10 +1,12 @@
 
 import './App.css';
+import Sidebar from  "./Sidebar"
 
 function App() {
   return (
     <div className="app">
-      <h1>Twitter soon...</h1>
+    
+      <Sidebar />
     </div>
   );
 }
