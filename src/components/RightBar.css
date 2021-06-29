@@ -1,3 +1,30 @@
 .rightBar {
     flex: 0.3;
 }
+
+.rigthBar_input {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.rigthBar_input > input {
+    border: none;
+    background-color: var(--main-bg);
+}
+
+.rightBar_searchIcon {
+    color: gray;
+}
+
+.rightBar_container {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
