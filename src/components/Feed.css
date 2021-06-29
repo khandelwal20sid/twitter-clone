@@ -1,0 +1,21 @@
+.feed {
+  flex: 0.4;
+  border-right: 1px solid var(--main-bg);
+  min-width: fit-content;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed_header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  border: 1px solid var(--main-bg);
+  padding: 15px 20px;
+}
