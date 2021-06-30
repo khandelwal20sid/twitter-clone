@@ -29,6 +29,7 @@ function Post({ diplayName, username, verified, text, image, avatar }) {
         </div>
         <img
           src="https://i.pinimg.com/236x/1b/55/07/1b55075a3695107d4e4c86d8aaef9cd0.jpg"
+          // src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
           alt=""
         />
         <div className="post_footer">
