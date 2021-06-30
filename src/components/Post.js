@@ -11,27 +11,24 @@ function Post({ diplayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post_avatar">
-        <Avatar src="/assets/avatar.svg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post_body">
         <div className="post_header">
           <div className="post_header_text">
             <h3>
-              Siddharth Khandelwal <VerifiedUserIcon className="post_badge" />{" "}
+              {diplayName}{" "}
               <span className="post_header_username">
-                @khandelwal20sid
-              </span>{" "}
+                {verified && <VerifiedUserIcon className="post_badge" />}{" "}
+                @{username}
+              </span>
             </h3>
           </div>
           <div className="post_header_description">
-            <p>My first tweet</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          src="https://i.pinimg.com/236x/1b/55/07/1b55075a3695107d4e4c86d8aaef9cd0.jpg"
-          // src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-          alt=""
-        />
+        <img src={image} alt="" />
         <div className="post_footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
