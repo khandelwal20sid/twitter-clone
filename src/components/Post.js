@@ -1,5 +1,5 @@
 import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Post.css";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
@@ -7,9 +7,9 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
 
-function Post({ diplayName, username, verified, text, image, avatar }) {
+const Post = forwardRef(({ diplayName, username, verified, text, image, avatar }, ref) => {
   return (
-    <div className="post">
+    <div className="post" ref={ref}>
       <div className="post_avatar">
         <Avatar src={avatar} />
       </div>
@@ -19,8 +19,8 @@ function Post({ diplayName, username, verified, text, image, avatar }) {
             <h3>
               {diplayName}{" "}
               <span className="post_header_username">
-                {verified && <VerifiedUserIcon className="post_badge" />}{" "}
-                @{username}
+                {verified && <VerifiedUserIcon className="post_badge" />} @
+                {username}
               </span>
             </h3>
           </div>
@@ -38,6 +38,6 @@ function Post({ diplayName, username, verified, text, image, avatar }) {
       </div>
     </div>
   );
-}
+});
 
 export default Post;
